@@ -4,6 +4,7 @@ class Pet {
   float y;
   float energy;
 
+//construktor, siger hvad der skal bruges når der laves et Pet
   Pet(String name, float x, float y) {
     this.name = name;
     this.x = x;
@@ -19,6 +20,7 @@ class Pet {
     }
   }
 
+//pets attibuter??????
   void display() {
     fill(120, 200, 140);
     ellipse(x, y, 100, 100);
