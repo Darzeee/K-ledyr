@@ -4,7 +4,7 @@ Pet pet;
 
 void setup() {
   size(600, 400);
-  pet = new Pet("Bobo", width/2, height/2);  //laver nyt objekt og definere dette.
+  pet = new Pet("Carla", 200, height/2);  //laver nyt objekt og definere dette.
 }
 
 void draw() {
