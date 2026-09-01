@@ -12,4 +12,12 @@ void draw() {
 
   pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
   pet.display(); //viser pet objektet
+
+
+  if (keyPressed) {
+    if(key == "s" || key == "S" ){
+     pet.sleep(); //kalder sleep hvis der trykkes på s 
+    }
+    
+  }
 }

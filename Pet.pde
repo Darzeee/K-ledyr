@@ -23,12 +23,17 @@ class Pet {
 
 //pets attibuter??????
   void display() {
-    fill(120, 200, 140);
+    
+float r = random(1 , 255);
+float g = random(1 , 255);
+float b = random(1 , 255);
+
+    fill(r, g, b); //farve på pet
     ellipse(x, y, 100, 100);
 
     fill(0);
     textAlign(CENTER);
-    text(name, x, y - 65);
+    text(name, x, y - 80);
     text("Energi: " + int(energy), x, y + 75);
   }
 }
