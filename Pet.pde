@@ -4,6 +4,7 @@ class Pet {
   float y;
   float energy;
 
+
 //construktor, siger hvad der skal bruges når der laves et Pet
   Pet(String name, float x, float y) {
     this.name = name;
@@ -31,3 +32,11 @@ class Pet {
     text("Energi: " + int(energy), x, y + 75);
   }
 }
+
+  void sleep(){
+    float sleep = 0;
+    sleep = sleep + 0.05;
+        if (sleep < 0) {
+      sleep = 100;
+    }
+  }
