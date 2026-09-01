@@ -11,7 +11,7 @@ class Pet {
     energy = 100;
   }
 
-  void update() {
+  void update() { //Får energien til at gå nedad 
     energy = energy - 0.05;
 
     if (energy < 0) {
