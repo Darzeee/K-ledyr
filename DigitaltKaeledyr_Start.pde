@@ -14,10 +14,8 @@ void draw() {
   pet.display(); //viser pet objektet
 
 
-  if (keyPressed) {
-    if(key == "s" || key == "S" ){
-     pet.sleep(); //kalder sleep hvis der trykkes på s 
+  if (keyPressed && (key == 's' || key == 'S')) {
+    pet.sleep(); //kalder sleep hvis der trykkes på s
     }
-    
+  
   }
-}

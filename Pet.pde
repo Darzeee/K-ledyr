@@ -36,12 +36,13 @@ float b = random(1 , 255);
     text(name, x, y - 80);
     text("Energi: " + int(energy), x, y + 75);
   }
-}
+
 
   void sleep(){
-    float sleep = 0;
-    sleep = sleep + 0.05;
-        if (sleep < 0) {
-      sleep = 100;
+    energy = energy + 0.15;
+        if (energy > 100) {
+      energy = 100;
     }
   }
+  
+}
