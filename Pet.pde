@@ -22,20 +22,20 @@ class Pet {
       vand = 0;
     }
 
-int vandSkålX = 100;
-int vandSkålY = 100;
-rect(vandSkålX, vandSkålY,100,100);
-fill(0);
+    int vandSkålX = 100;
+    int vandSkålY = 100;
+    int vandSkålLength = vandSkålX + 50;
+    int vandSkålYHeight = vandSkålY + 50;
+    rect(vandSkålX, vandSkålY, vandSkålLength, vandSkålYHeight);
+    fill(0);
 
 
-    if (mousePressed == true) {
-    
-      if(mouseX == vandSkålX & vandSkålY){
-        
+    if (mousePressed) {
+      if (mouseX >= vandSkålX && mouseY >= vandSkålY &&
+     mouseX <= vandSkålX + vandSkålLength && mouseY <= vandSkålY + vandSkålYHeight) {
+        println("vand");
       }
-      
     }
-    
   }
 
   void display() {
