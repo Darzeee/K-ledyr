@@ -1,21 +1,24 @@
+
 //laver objekt med navn pet, fra klassen Pet
 Pet pet;
+
+Pleje vand;
 
 void setup() {
   size(1000, 700);
 
   pet = new Pet("Blob", 300, 325);
+  vand = new Pleje();
+  
 }
 
 void draw() {
-  background(255);
+  background(#D6B488);
   image(pet.img, 300, 325, 400, 300);
 
 
   pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
   pet.display(); //viser pet objektet
- 
-
 
 
   fill(#5D2706);
