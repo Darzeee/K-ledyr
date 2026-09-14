@@ -12,8 +12,8 @@ class Pet {
     this.x = x;
     this.y = y;
     vand = 100;
-    
     img = loadImage("Dogfish.png");
+
   }
 
   void update() { //Får energien til at gå nedad

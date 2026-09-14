@@ -4,37 +4,27 @@ Pet pet;
 
 void setup() {
   size(1000, 700);
-  
-  pet = new Pet("Blob", 300, 325);
 
+  pet = new Pet("Blob", 300, 325);
 }
 
-
 void draw() {
-
-
-
- // pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
- // pet.display(); //viser pet objektet
-
-
-  
   background(255);
-image(img, 300, 325, 400, 300);
+  image(pet.img, 300, 325, 400, 300);
 
 
   pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
   pet.display(); //viser pet objektet
-  
-  
-  
 
-fill(#5D2706);
-rect(0, 600, 1000, 100);
 
-fill(#8E6145);
 
-for (int x = 0; x < 1000; x += 100) {
-  rect(x, 600, 50, 100);
-}
+
+  fill(#5D2706);
+  rect(0, 600, 1000, 100);
+
+  fill(#8E6145);
+
+  for (int x = 0; x < 1000; x += 100) {
+    rect(x, 600, 50, 100);
+  }
 }
