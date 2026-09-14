@@ -1,4 +1,3 @@
-
 //laver objekt med navn pet, fra klassen Pet
 Pet pet;
 
@@ -15,7 +14,7 @@ void draw() {
 
   pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
   pet.display(); //viser pet objektet
-
+ 
 
 
 
