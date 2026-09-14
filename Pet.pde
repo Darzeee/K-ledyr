@@ -1,48 +1,44 @@
 class Pet {
+  PImage img;
+
   String name;
+  float vand;
   float x;
   float y;
-  float energy;
 
-
-//construktor, siger hvad der skal bruges når der laves et Pet
+  //construktor, siger hvad der skal bruges når der laves et Pet
   Pet(String name, float x, float y) {
     this.name = name;
     this.x = x;
     this.y = y;
-    energy = 100;
+    vand = 100;
+    
+    img = loadImage("Dogfish.png");
   }
 
-  void update() { //Får energien til at gå nedad 
-    energy = energy - 0.05;
+  void update() { //Får energien til at gå nedad
+    vand = vand - 0.05;
 
-    if (energy < 0) {
-      energy = 0;
+    if (vand < 0) {
+      vand = 0;
     }
   }
 
-//pets attibuter??????
-  void display() {
-    
-float r = random(1 , 255);
-float g = random(1 , 255);
-float b = random(1 , 255);
 
-    fill(r, g, b); //farve på pet
-    ellipse(x, y, 100, 100);
+  void display() {
+    image(img, x, y, 400, 300);
 
     fill(0);
     textAlign(CENTER);
-    text(name, x, y - 80);
-    text("Energi: " + int(energy), x, y + 75);
+    text(name, 100, 100);
+    text("Vand: " + int(vand), x, y + 75);
   }
 
 
-  void sleep(){
-    energy = energy + 0.15;
-        if (energy > 100) {
-      energy = 100;
+  void sleep() {
+    vand = vand + 0.15;
+    if (vand > 100) {
+      vand = 100;
     }
   }
-  
 }
