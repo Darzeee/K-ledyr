@@ -2,7 +2,7 @@ class Pleje {
   
   
  
-  void Vand
+  void Vand(){}
   
   
 }
