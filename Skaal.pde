@@ -15,25 +15,25 @@ class Skaal {
     this.h = h;
     this.farve = farve;
     this.indhold = indhold;
-    offset = 10;
+    offset = 45;
   }
 
   void display() {
-fill(farve);
+    fill(farve);
     rect(x, y, l, h);
-   
-   fill(farve);
-    rect(x-offset, y-offset, l, h);
-    
-/*
+    fill(indhold);
+    ellipse(x+offset, y+12, l-10, h-25);
+
+
+    /*
     text("Vand", vandSkålX + vandSkålLength/2, vandSkålY + vandSkålHeight/2 + 5);
-    textSize(20);
-    if (mousePressed) {
-      if (mouseX >= vandSkålX && mouseY >= vandSkålY &&
-        mouseX <= vandSkålX + vandSkålLength && mouseY <= vandSkålY + vandSkålHeight) {
-        println("vand");
-      }
-    }
-    */
+     textSize(20);
+     if (mousePressed) {
+     if (mouseX >= vandSkålX && mouseY >= vandSkålY &&
+     mouseX <= vandSkålX + vandSkålLength && mouseY <= vandSkålY + vandSkålHeight) {
+     println("vand");
+     }
+     }
+     */
   }
 }

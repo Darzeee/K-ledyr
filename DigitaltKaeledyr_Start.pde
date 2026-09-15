@@ -14,7 +14,7 @@ void setup() {
   // vand = new Pleje();
 
   vandskaal = new Skaal("Vand", 50, 560, 90, 40, #B2B2B2, #5187FA);
- // madskaal = new Skaal("Mad", 100, 100, 100, 100, #B2B2B2, #5187FA);
+ madskaal = new Skaal("Mad", 180, 560, 90, 40, #B2B2B2, #6C543F);
 }
 
 void draw() {
@@ -25,7 +25,7 @@ void draw() {
   pet.update(); //updater pet objektet
   pet.display(); //viser pet objektet
   vandskaal.display(); //viser vandskålen
-  //madskaal.display(); //viser madskålen
+  madskaal.display(); //viser madskålen
 
 
 
