@@ -1,5 +1,6 @@
 class Pet {
-  PImage img;
+  PImage normalimg;
+  PImage dødimg;
 
   String name;
   float vand;
@@ -15,17 +16,18 @@ class Pet {
     this.y = y;
     vand = 100;
     glæde = 100;
-    img = loadImage("Dogfish.png");
+    normalimg = loadImage("Dogfish.png");
+    dødimg = loadImage("Blackdogfish.png");
   }
 
   void update() { //Får energien til at gå nedad
-    vand = vand - 0.05;
+    vand = vand - 0.02;
 
     if (vand < 0) {
       vand = 0;
     }
 
-    glæde = glæde - 0.05;
+    glæde = glæde - 0.04;
 
     if (glæde < 0) {
       glæde = 0;
@@ -34,7 +36,8 @@ class Pet {
 
 
   void display() {
-    image(img, x, y, 400, 300);
+    image(dødimg, x, y, 400, 300);
+    image(normalimg, x, y, 400, 300);
   textAlign(CENTER);
   fill(0);
   textSize(50);
