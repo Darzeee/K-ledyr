@@ -14,11 +14,15 @@ void setup() {
   // vand = new Pleje();
 
   vandskaal = new Skaal("Vand", 50, 560, 90, 40, #B2B2B2, #5187FA);
+<<<<<<< HEAD
  // madskaal = new Skaal("Mad", 100, 100, 100, 100, #B2B2B2, #5187FA);
 
 //Øjet
   noStroke();
   e1 = new Eye( 355,  395, 20);
+=======
+ madskaal = new Skaal("Mad", 180, 560, 90, 40, #B2B2B2, #6C543F);
+>>>>>>> 33dd9e4febd2fd08d0be741c00b7b0d9ed6248c1
 }
 
 void draw() {
@@ -29,7 +33,7 @@ void draw() {
   pet.update(); //updater pet objektet
   pet.display(); //viser pet objektet
   vandskaal.display(); //viser vandskålen
-  //madskaal.display(); //viser madskålen
+  madskaal.display(); //viser madskålen
 
 
 
