@@ -5,16 +5,16 @@ Pet pet;
 //Pleje vand;
 
 Skaal vandskaal;
+Skaal madskaal;
 
 void setup() {
   size(1000, 700);
 
   pet = new Pet("Blob", 300, 325);
- // vand = new Pleje();
-  
-  vandskaal = new Skaal("Vand", 50, 500, 90, 40, #6581BC, #5187FA);
- 
-  
+  // vand = new Pleje();
+
+  vandskaal = new Skaal("Vand", 50, 560, 90, 40, #6581BC, #5187FA);
+  madskaal = new Skaal("Mad", 100,100,100,100, #6581BC, #5187FA);
 }
 
 void draw() {
@@ -24,7 +24,8 @@ void draw() {
 
   pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
   pet.display(); //viser pet objektet
-
+  vandskaal.display();
+  madskaal.display();
 
   fill(#5D2706);
   rect(0, 600, 1000, 100);

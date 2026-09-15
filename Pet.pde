@@ -21,22 +21,7 @@ class Pet {
     if (vand < 0) {
       vand = 0;
     }
-    fill(#47A0CE);
-    int vandSkålX = 50;
-    int vandSkålY = 560;
-    int vandSkålLength = 90;
-    int vandSkålHeight = 40;
-    rect(vandSkålX, vandSkålY, vandSkålLength, vandSkålHeight);
-    fill(0);
-    
-    text("Vand",vandSkålX + vandSkålLength/2 , vandSkålY + vandSkålHeight/2 + 5);
-    textSize(20);
-    if (mousePressed) {
-      if (mouseX >= vandSkålX && mouseY >= vandSkålY &&
-     mouseX <= vandSkålX + vandSkålLength && mouseY <= vandSkålY + vandSkålHeight) {
-        println("vand");
-      }
-    }
+   
   }
 
   void display() {
