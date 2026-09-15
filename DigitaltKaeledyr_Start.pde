@@ -15,6 +15,10 @@ void setup() {
 
   vandskaal = new Skaal("Vand", 50, 560, 90, 40, #B2B2B2, #5187FA);
  // madskaal = new Skaal("Mad", 100, 100, 100, 100, #B2B2B2, #5187FA);
+
+//Øjet
+  noStroke();
+  e1 = new Eye( 355,  395, 20);
 }
 
 void draw() {
@@ -37,4 +41,8 @@ void draw() {
   for (int x = 0; x < 1000; x += 100) {
     rect(x, 600, 50, 100);
   }
+//Øjet
+  e1.update(mouseX, mouseY);
+
+  e1.display();
 }

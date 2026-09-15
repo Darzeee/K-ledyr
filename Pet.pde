@@ -35,19 +35,15 @@ class Pet {
 
   void display() {
     image(img, x, y, 400, 300);
-
-    fill(0);
-    textAlign(CENTER);
-    text(name, 100, 100);
-    text("Vand: " + int(vand), x, y + 75);
-
-
+  textAlign(CENTER);
+  fill(0);
+  textSize(50);
   text(name, width/2, 65);
-  textSize(20);
+  textSize(25);
   text("Vand: " + int(vand), 700, 20 + 75);
-  textSize(20);
+  textSize(25);
   text("Glæde: " + int(glæde), 295, 20 + 75);
-
+fill(#A57D48);
   float glædelength = glæde * 2;
   float vandlength = vand * 2;
   rect(width/2+100, 35, 210, 30);
