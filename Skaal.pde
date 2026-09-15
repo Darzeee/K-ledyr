@@ -17,5 +17,9 @@ class Skaal {
    
   }
   
+  void display(){
+    
+  }
+  
   
 }
