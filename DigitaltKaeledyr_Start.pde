@@ -2,13 +2,18 @@
 //laver objekt med navn pet, fra klassen Pet
 Pet pet;
 
-Pleje vand;
+//Pleje vand;
+
+Skaal vandskaal;
 
 void setup() {
   size(1000, 700);
 
   pet = new Pet("Blob", 300, 325);
-  vand = new Pleje();
+ // vand = new Pleje();
+  
+  vandskaal = new Skaal("Vand", 50, 500, 90, 40, #6581BC, #5187FA);
+ 
   
 }
 
