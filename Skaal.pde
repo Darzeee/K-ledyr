@@ -19,9 +19,10 @@ class Skaal {
   }
 
   void display() {
-
+fill(farve);
     rect(x, y, l, h);
-    fill(farve);
+   
+   fill(farve);
     rect(x-offset, y-offset, l, h);
     
 /*

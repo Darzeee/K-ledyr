@@ -13,8 +13,8 @@ void setup() {
   pet = new Pet("Blob", 300, 325);
   // vand = new Pleje();
 
-  vandskaal = new Skaal("Vand", 50, 560, 90, 40, #6581BC, #5187FA);
-  madskaal = new Skaal("Mad", 100,100,100,100, #6581BC, #5187FA);
+  vandskaal = new Skaal("Vand", 50, 560, 90, 40, #B2B2B2, #5187FA);
+ // madskaal = new Skaal("Mad", 100, 100, 100, 100, #B2B2B2, #5187FA);
 }
 
 void draw() {
@@ -22,15 +22,17 @@ void draw() {
   image(pet.img, 300, 325, 400, 300);
 
 
-  pet.update(); //updater pet objektet - kaldes hele tiden igen og igen, da den er under draw()
+  pet.update(); //updater pet objektet
   pet.display(); //viser pet objektet
-  vandskaal.display();
-  madskaal.display();
+  vandskaal.display(); //viser vandskålen
+  //madskaal.display(); //viser madskålen
 
-  fill(#5D2706);
+
+
+
+  fill(#5D2706); //gulvbræder
   rect(0, 600, 1000, 100);
-
-  fill(#8E6145);
+  fill(#8E6145); //gulvbræder
 
   for (int x = 0; x < 1000; x += 100) {
     rect(x, 600, 50, 100);
