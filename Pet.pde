@@ -27,7 +27,7 @@ class Pet {
       vand = 0;
     }
 
-    glæde = glæde - 0.04;
+    glæde = glæde - 0.03;
 
     if (glæde < 0) {
       glæde = 0;
