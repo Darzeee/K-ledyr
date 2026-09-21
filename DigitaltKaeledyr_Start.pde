@@ -33,6 +33,8 @@ void draw() {
 
 
 
+//gulv
+
   fill(#5D2706); //gulvbræder
   rect(0, 600, 1000, 100);
   fill(#8E6145); //gulvbræder
@@ -42,6 +44,5 @@ void draw() {
   }
 //Øjet
   e1.update(mouseX, mouseY);
-
   e1.display();
 }

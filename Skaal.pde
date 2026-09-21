@@ -25,15 +25,19 @@ class Skaal {
     ellipse(x+offset, y+12, l-10, h-25);
 
 
-    /*
-    text("Vand", vandSkålX + vandSkålLength/2, vandSkålY + vandSkålHeight/2 + 5);
-     textSize(20);
-     if (mousePressed) {
-     if (mouseX >= vandSkålX && mouseY >= vandSkålY &&
-     mouseX <= vandSkålX + vandSkålLength && mouseY <= vandSkålY + vandSkålHeight) {
-     println("vand");
-     }
-     }
-     */
+
+    fill(0);
+    textSize(15);
+    text(name, x + l/2, y + h/2 + 14);
+    
+   
+    
+    
+    
+    if (mousePressed) {
+      if (mouseX >= x && y >= y && mouseX <= x + l && mouseY <= y + h) {
+        println(name);
+      }
+    }
   }
 }
