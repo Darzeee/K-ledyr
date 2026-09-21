@@ -66,7 +66,7 @@ void glæde() {
 }
 
 void tørst() {
-  vand = vand + 0.15;
+  vand = vand + 2;
   if (vand > 100) {
     vand = 100;
   }

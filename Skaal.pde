@@ -18,6 +18,7 @@ class Skaal {
     offset = 45;
   }
 
+//vis skålene
   void display() {
     fill(farve);
     rect(x, y, l, h);
@@ -25,18 +26,17 @@ class Skaal {
     ellipse(x+offset, y+12, l-10, h-25);
 
 
-
+//tekst på skålene
     fill(0);
     textSize(15);
     text(name, x + l/2, y + h/2 + 14);
-    
-   
-    
-    
-    
+
+
     if (mousePressed) {
       if (mouseX >= x && y >= y && mouseX <= x + l && mouseY <= y + h) {
         println(name);
+        
+        pet.tørst();     
       }
     }
   }
