@@ -20,6 +20,8 @@ void setup() {
   noStroke();
   e1 = new Eye( 355,  395, 20);
  madskaal = new Skaal("Mad", 180, 560, 90, 40, #B2B2B2, #6C543F);
+
+  
 }
 
 void draw() {
@@ -45,4 +47,8 @@ void draw() {
 //Øjet
   e1.update(mouseX, mouseY);
   e1.display();
+}
+void mousePressed() {
+  vandskaal.mousePressed();
+//  madskaal.mousePressed();
 }

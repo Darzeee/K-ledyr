@@ -1,0 +1,8 @@
+class Pleje {
+  
+  
+ 
+  void Vand(){}
+  
+  
+}

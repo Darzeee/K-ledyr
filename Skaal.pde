@@ -32,12 +32,13 @@ class Skaal {
     text(name, x + l/2, y + h/2 + 14);
 
 
-    if (mousePressed) {
-      if (mouseX >= x && y >= y && mouseX <= x + l && mouseY <= y + h) {
-        println(name);
-        
-        pet.tørst();     
-      }
+}
+
+void mousePressed() {
+  if (mouseX >= x && mouseY >= y && mouseX <= x + l && mouseY <= y + h) {
+    println(name);
+    
+    pet.tørst();
     }
   }
 }
