@@ -26,7 +26,7 @@ class Pet {
   }
 
   void update() { //Får energien til at gå nedad
-    vand = vand - 10.04;
+    vand = vand - 0.04;
 
     normalimgTint = normalimgTint - 0.4;
 
