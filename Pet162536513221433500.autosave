@@ -11,7 +11,7 @@ class Pet {
   float glæde;
 
   boolean glædeDød;
-  boolean vandDød;
+  
 
 
   //construktor, siger hvad der skal bruges når der laves et Pet
@@ -23,17 +23,18 @@ class Pet {
     glæde = 100;
     normalimg = loadImage("Dogfish.png");
     dødimg = loadImage("Blackdogfish.png");
+
   }
 
   void update() { //Får energien til at gå nedad
-    vand = vand - 10.04;
+    vand = vand - 0.04;
 
     normalimgTint = normalimgTint - 0.4;
 
     if (vand < 0) {
       vand = 0;
-      vandDød = true;
     }
+
 
 
     glæde = glæde - 0.05;
@@ -41,9 +42,12 @@ class Pet {
     if (glæde < 0) {
       glæde = 0;
       glædeDød = true;
-    
+      textSize(40);
+      fill(0);
+      text("Dit dyr er død din dumme luder ",width/2,height/2 - 100);
     }
   }
+
 
 
   void display() {
@@ -74,6 +78,7 @@ class Pet {
     rect(width/2+105, 40, vandlength, 20);
     fill(#EAD71F);
     rect(width/2-305, 40, glædelength, 20);
+    
   }
 
   void glæde() {
