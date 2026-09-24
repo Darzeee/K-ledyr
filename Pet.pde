@@ -9,6 +9,8 @@ class Pet {
   float y;
   float glæde;
 
+  boolean glædeDød;
+
 
   //construktor, siger hvad der skal bruges når der laves et Pet
   Pet(String name, float x, float y) {
@@ -22,9 +24,9 @@ class Pet {
   }
 
   void update() { //Får energien til at gå nedad
-    vand = vand - 0.02;
+    vand = vand - 0.04;
 
-    normalimgTint = normalimgTint - 0.2;
+    normalimgTint = normalimgTint - 0.4;
 
     if (vand < 0) {
       vand = 0;
@@ -32,12 +34,14 @@ class Pet {
 
 
 
-    glæde = glæde - 0.03;
+    glæde = glæde - 0.05;
 
     if (glæde < 0) {
       glæde = 0;
+      glædeDød = true;
     }
   }
+
 
 
   void display() {
@@ -48,6 +52,7 @@ class Pet {
     image(normalimg, x, y, 400, 300);
 
     noTint();
+
     textAlign(CENTER);
     fill(0);
     textSize(50);
@@ -66,6 +71,7 @@ class Pet {
     rect(width/2+105, 40, vandlength, 20);
     fill(#EAD71F);
     rect(width/2-305, 40, glædelength, 20);
+    
   }
 
   void glæde() {

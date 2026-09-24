@@ -32,8 +32,17 @@ void draw() {
   vandskaal.display(); //viser vandskålen
   madskaal.display(); //viser madskålen
 
+//Øjet
+  e1.update(mouseX, mouseY);
+  e1.display();
+  
+//hvis man dør
+  if (pet.glædeDød) {
+    noStroke();
+    fill(0, 128);
+    rect(0, 0, width, height);
 
-
+  }
 
 //gulv
 
@@ -44,9 +53,7 @@ void draw() {
   for (int x = 0; x < 1000; x += 100) {
     rect(x, 600, 50, 100);
   }
-//Øjet
-  e1.update(mouseX, mouseY);
-  e1.display();
+
 }
 void mousePressed() {
   vandskaal.mousePressed();
