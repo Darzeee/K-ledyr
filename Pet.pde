@@ -1,6 +1,7 @@
 class Pet {
   PImage normalimg;
   PImage dødimg;
+
   float normalimgTint = 255;
 
   String name;
@@ -21,6 +22,7 @@ class Pet {
     glæde = 100;
     normalimg = loadImage("Dogfish.png");
     dødimg = loadImage("Blackdogfish.png");
+
   }
 
   void update() { //Får energien til at gå nedad
@@ -34,11 +36,14 @@ class Pet {
 
 
 
-    glæde = glæde - 0.05;
+    glæde = glæde - 5.05;
 
     if (glæde < 0) {
       glæde = 0;
       glædeDød = true;
+      textSize(40);
+      fill(0);
+      text("Dit dyr er død din dumme luder ",width/2,height/2 - 100);
     }
   }
 
@@ -61,12 +66,13 @@ class Pet {
     text("Vand: " + int(vand), 700, 20 + 75);
     textSize(25);
     text("Glæde: " + int(glæde), 295, 20 + 75);
-    fill(#A57D48);
+    fill(120);
+    stroke(0);
     float glædelength = glæde * 2;
     float vandlength = vand * 2;
     rect(width/2+100, 35, 210, 30);
     rect(width/2-310, 35, 210, 30);
-
+    noStroke();
     fill(#4B82C4);
     rect(width/2+105, 40, vandlength, 20);
     fill(#EAD71F);
