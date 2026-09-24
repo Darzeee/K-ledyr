@@ -11,6 +11,7 @@ class Pet {
   float glæde;
 
   boolean glædeDød;
+  boolean vandDød;
 
 
   //construktor, siger hvad der skal bruges når der laves et Pet
@@ -32,18 +33,27 @@ class Pet {
 
     if (vand < 0) {
       vand = 0;
+      vandDød = true;
+      fill(120);
+      stroke(0);
+      rect(width/2-380,height/2-130,width/2+260,40);
+      textSize(30);
+      fill(0);
+      text("Dit dyr er døde af tørst... det en hund, den har brug for vand.",width/2,height/2 - 100);
     }
 
 
 
-    glæde = glæde - 5.05;
+    glæde = glæde - 10.05;
 
     if (glæde < 0) {
       glæde = 0;
       glædeDød = true;
+      stroke(0);
+      rect(width/2-380,height/2-130,width/2+260,40);
       textSize(40);
       fill(0);
-      text("Dit dyr er død din dumme luder ",width/2,height/2 - 100);
+      text("Dit dyr er døde af depression din NIGGER",width/2,height/2 - 100);
     }
   }
 
