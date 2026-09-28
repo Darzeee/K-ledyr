@@ -1,11 +1,7 @@
 ArrayList<Particle> particles = new ArrayList<Particle>();
 
-
 //laver objekt med navn pet, fra klassen Pet
 Pet pet;
-
-//laver objekt med navn particle, fra klassen Particle
-Particle particle;
 
 //opretter mad og vandskål, fra klassen Skaal
 Skaal vandskaal;
@@ -24,10 +20,6 @@ void setup() {
   vandskaal = new Skaal("Vand", 25, 560, 90, 40, #B2B2B2, #5187FA);
   madskaal = new Skaal("Mad", 25, 500, 90, 40, #B2B2B2, #6C543F);
 
-
-
-
-
   //Øjet
   noStroke();
   e1 = new Eye( 355, 395, 20);
@@ -41,41 +33,60 @@ void draw() {
   vandskaal.display(); //viser vandskålen
   madskaal.display(); //viser madskålen
 
-  //Øjet
-  e1.update(mouseX, mouseY);
-  e1.display();
 
-  //hvis man dør
-  if (pet.glædeDød) {
-    noStroke();
-    fill(0, 128);
-    rect(0, 0, width, height);
+//partikler
+  for (int i = particles.size() - 1; i >= 0; i--) {
+    Particle p = particles.get(i);
 
-    stroke(0);
-    fill(200);
-    rect(width/2-380, height/2-130, width/2+260, 80);
-    textSize(30);
-    fill(0);
-    text("Dit dyr er døde af depression...", width/2, height/2 - 100);
-    text("Næste gang skal du huske at kæle for " + pet.name, width/2, height/2 -62 );
+    p.update();
+    p.display(); 
   }
 
-  if (pet.vandDød) {
-    noStroke();
-    fill(0, 128);
-    rect(0, 0, width, height);
+ //Øjet
+    e1.update(mouseX, mouseY);
+    e1.display();
 
-    stroke(0);
-    fill(200);
-    rect(width/2-410, height/2-140, width/2+320, 130);
-    textSize(30);
-    fill(0);
-    text(pet.name + " døde af tørst...", width/2, height/2 - 100);
-    text("Vand er vigtigt for alle levene væsner, så husk at give " + pet.name + " vand!", width/2, height/2 - 62);
-    text(" Måske skal du også selv tage et glas vand, inden du spiller igen.", width/2, height/2 - 30);
+ //hvis man dør
+    if (pet.glædeDød) {
+      noStroke();
+      fill(0, 128);
+      rect(0, 0, width, height);
+
+      stroke(0);
+      fill(200);
+      rect(width/2-380, height/2-130, width/2+260, 80);
+      textSize(30);
+      fill(0);
+      text("Dit dyr er døde af depression...", width/2, height/2 - 100);
+      text("Næste gang skal du huske at kæle for " + pet.name, width/2, height/2 -62 );
+    }
+
+    if (pet.vandDød) {
+      noStroke();
+      fill(0, 128);
+      rect(0, 0, width, height);
+
+      stroke(0);
+      fill(200);
+      rect(width/2-410, height/2-140, width/2+320, 130);
+      textSize(30);
+      fill(0);
+      text(pet.name + " døde af tørst...", width/2, height/2 - 100);
+      text("Vand er vigtigt for alle levene væsner, så husk at give " + pet.name + " vand!", width/2, height/2 - 62);
+      text(" Måske skal du også selv tage et glas vand, inden du spiller igen.", width/2, height/2 - 30);
+    }
   }
-}
-void mousePressed() {
-  vandskaal.mousePressed();
-  //  madskaal.mousePressed();
-}
+  
+  void mousePressed() {
+    vandskaal.mousePressed();
+    
+    for (int i = 0; i < 4; i++) {
+    particles.add(new HeartParticle(
+      mouseX + random(-8, 8),
+      mouseY + random(-8, 8)
+    ));
+    
+    glæde.mousePressed();
+    
+    //  madskaal.mousePressed();
+  }
