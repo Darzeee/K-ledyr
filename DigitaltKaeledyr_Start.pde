@@ -3,7 +3,7 @@
 Pet pet;
 
 PFont emojiFont;
-PImage Nigga;
+PImage Baggrund;
 
 
 Skaal vandskaal;
@@ -11,7 +11,7 @@ Skaal madskaal;
 
 void setup() {
   size(1000, 700);
-  Nigga = loadImage("Nigga.png");
+  Baggrund = loadImage("Baggrund.png");
 
   pet = new Pet("Blob", 300, 325);
 
@@ -26,7 +26,7 @@ void setup() {
 
 void draw() {
   // background(#D6B488);
-  image(Nigga, 0, 0, 1000, 700);
+  image(Baggrund, 0, 0, 1000, 700);
   pet.update(); //updater pet objektet
   pet.display(); //viser pet objektet
   vandskaal.display(); //viser vandskålen
