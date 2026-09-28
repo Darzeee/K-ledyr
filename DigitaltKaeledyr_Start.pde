@@ -34,13 +34,7 @@ void draw() {
   madskaal.display(); //viser madskålen
 
 
-//partikler
-  for (int i = particles.size() - 1; i >= 0; i--) {
-    Particle p = particles.get(i);
 
-    p.update();
-    p.display(); 
-  }
 
  //Øjet
     e1.update(mouseX, mouseY);
@@ -86,7 +80,8 @@ void draw() {
       mouseY + random(-8, 8)
     ));
     
-    glæde.mousePressed();
+   // particles.mousePressed();
     
     //  madskaal.mousePressed();
+  }
   }

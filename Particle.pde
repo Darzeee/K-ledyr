@@ -25,19 +25,9 @@ class Particle {
     fill(alpha);
     circle(x, y, 12);
   }
-}
-
-class HeartParticle extends Particle {
-  HeartParticle(float x, float y) {
-    super(x, y);
-  }
 
 
   void mousePressed() {
-    if (mouseX >= x && mouseY >= y && mouseX <= x + l && mouseY <= y + h) {
-      println(name);
-
       pet.glæde();
     }
   }
-}
