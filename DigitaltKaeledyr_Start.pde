@@ -1,23 +1,32 @@
+ArrayList<Particle> particles = new ArrayList<Particle>();
+
 
 //laver objekt med navn pet, fra klassen Pet
 Pet pet;
 
-PFont emojiFont;
-PImage Baggrund;
+//laver objekt med navn particle, fra klassen Particle
+Particle particle;
 
-
+//opretter mad og vandskål, fra klassen Skaal
 Skaal vandskaal;
 Skaal madskaal;
 
+//billede til baggrund
+PImage Nigga;
+
+
 void setup() {
   size(1000, 700);
-  Baggrund = loadImage("Baggrund.png");
+  Nigga = loadImage("Nigga.png");
 
   pet = new Pet("Blob", 300, 325);
 
-
   vandskaal = new Skaal("Vand", 25, 560, 90, 40, #B2B2B2, #5187FA);
   madskaal = new Skaal("Mad", 25, 500, 90, 40, #B2B2B2, #6C543F);
+
+
+
+
 
   //Øjet
   noStroke();
@@ -26,7 +35,7 @@ void setup() {
 
 void draw() {
   // background(#D6B488);
-  image(Baggrund, 0, 0, 1000, 700);
+  image(Nigga, 0, 0, 1000, 700);
   pet.update(); //updater pet objektet
   pet.display(); //viser pet objektet
   vandskaal.display(); //viser vandskålen
