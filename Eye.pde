@@ -17,6 +17,7 @@ class Eye {
   
   void display() {
     pushMatrix();
+    noStroke();
     translate(x, y);
     fill(255);
     ellipse(0, 0, size, size);

@@ -33,9 +33,6 @@ void draw() {
   vandskaal.display(); //viser vandskålen
   madskaal.display(); //viser madskålen
 
-
-
-
  //Øjet
     e1.update(mouseX, mouseY);
     e1.display();

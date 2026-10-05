@@ -41,39 +41,52 @@ class Pet {
     if (glæde < 0) {
       glæde = 0;
       glædeDød = true;
-    
     }
   }
 
 
   void display() {
+    //død baggrund og dyr
     image(dødimg, x, y, 400, 300);
-
     float alpha = map(vand, 0, 100, 0, 255);
     tint(255, alpha);
+
+    //normal dyr
     image(normalimg, x, y, 400, 300);
 
     noTint();
 
+    //skriv navn og boks bagved navn
+    fill(150);
+    stroke(0);
+    rect(width/2-72, 20, 140, 60);  //breden ændre sig ikke efter navnets længde
     textAlign(CENTER);
     fill(0);
     textSize(50);
     text(name, width/2, 65);
     textSize(25);
-    text("Vand: " + int(vand), 700, 20 + 75);
-    textSize(25);
-    text("Glæde: " + int(glæde), 295, 20 + 75);
-    fill(120);
-    stroke(0);
-    float glædelength = glæde * 2;
-    float vandlength = vand * 2;
+
+    //boks bag vand og glæde niveau
+    fill(150);
     rect(width/2+100, 35, 210, 30);
     rect(width/2-310, 35, 210, 30);
+
+    //vand og glæde bar
+    float glædelength = glæde * 2;
+    float vandlength = vand * 2;
     noStroke();
     fill(#4B82C4);
     rect(width/2+105, 40, vandlength, 20);
     fill(#EAD71F);
     rect(width/2-305, 40, glædelength, 20);
+
+    //vand og glæde bar
+    fill(0);
+    textSize(20);
+    text("Vand: " + int(vand), 700, 20 + 36);
+    text("Glæde: " + int(glæde), 295, 20 + 36);
+    fill(150);
+    stroke(0);
   }
 
   void glæde() {
