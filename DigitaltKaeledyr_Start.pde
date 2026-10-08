@@ -91,14 +91,15 @@ if (
   (sq(mouseX - pet.dyrHovedX) / sq(pet.dyrHovedbredde / 2.0) +
    sq(mouseY - pet.dyrHovedY) / sq(pet.dyrHovedhøjde / 2.0) <= 1)
 ) {
-
+  
     for (int i = 0; i < 4; i++) {
       particles.add(new HeartParticle(
         mouseX + random(-8, 8),
         mouseY + random(-8, 8)
         ));
 
-      //}
+pet.glæde();
+     
     }
   }
 
