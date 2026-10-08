@@ -4,19 +4,17 @@ class Eye {
   float x, y;
   int size;
   float angle = 0.0;
-  
+
   Eye(float tx, float ty, int ts) {
-   // x = tx;
-    //y = ty;
-    x = pet.x + tx;
-    y = pet.y + ty;
+    x = tx;
+    y = ty;
     size = ts;
- }
+  }
 
   void update(int mx, int my) {
     angle = atan2(my-y, mx-x);
   }
-  
+
   void display() {
     pushMatrix();
     noStroke();

@@ -3,8 +3,8 @@ class HeartParticle extends Particle {
   HeartParticle(float x, float y) {
     super(x, y);
   }
+  
 float colourx;
-
 
   @Override
   void display() {

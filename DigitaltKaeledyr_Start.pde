@@ -32,6 +32,7 @@ void draw() {
   pet.display(); //viser pet objektet
   vandskaal.display(); //viser vandskålen
   madskaal.display(); //viser madskålen
+  pet.dyrKropForm();
 
   //particle
 for (int i = particles.size() - 1; i >= 0; i--) {
@@ -40,10 +41,11 @@ for (int i = particles.size() - 1; i >= 0; i--) {
   p.update();
   p.display();
 
-  if (p.isDead()) {s
+  if (p.isDead()) {
     particles.remove(i);
   }
 }
+
  //Øjet
     e1.update(mouseX, mouseY);
     e1.display();
@@ -82,12 +84,14 @@ for (int i = particles.size() - 1; i >= 0; i--) {
   void mousePressed() {
     vandskaal.mousePressed();
     
+  // if(dist(mouseX, mouseY, pet.dyrKropX, pet.dyrKropY) < pet.radius){
       for (int i = 0; i < 4; i++) {
     particles.add(new HeartParticle(
       mouseX + random(-8, 8),
       mouseY + random(-8, 8)
     ));
-
+    
+    //}
     
   }
 

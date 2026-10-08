@@ -86,6 +86,14 @@ class Pet {
     stroke(0);
   }
 
+  void dyrKropForm () {
+    float dyrKropX = this.x+40;
+    float dyrKropY = this.y+100;
+    int radius = 100;
+
+    ellipse(dyrKropX, dyrKropY, radius, radius);
+  }
+
   void glæde() {
     glæde = glæde + 0.15;
     if (glæde > 100) {
@@ -97,8 +105,6 @@ class Pet {
     vand = vand + 2;
     if (vand > 100) {
       vand = 100;
-
-      this.x = this.x -100;
     }
   }
 }
