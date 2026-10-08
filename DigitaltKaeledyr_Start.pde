@@ -83,25 +83,24 @@ void draw() {
 
 void mousePressed() {
   vandskaal.mousePressed();
-madskaal.mousePressed();
+  madskaal.mousePressed();
 
 
-if (
-  (sq(mouseX - pet.dyrKropX) / sq(pet.dyrbredde / 2.0) +
-   sq(mouseY - pet.dyrKropY) / sq(pet.dyrhøjde / 2.0) <= 1)
-  ||
-  (sq(mouseX - pet.dyrHovedX) / sq(pet.dyrHovedbredde / 2.0) +
-   sq(mouseY - pet.dyrHovedY) / sq(pet.dyrHovedhøjde / 2.0) <= 1)
-) {
-  
+  if (
+    (sq(mouseX - pet.dyrKropX) / sq(pet.dyrbredde / 2.0) +
+    sq(mouseY - pet.dyrKropY) / sq(pet.dyrhøjde / 2.0) <= 1)
+    ||
+    (sq(mouseX - pet.dyrHovedX) / sq(pet.dyrHovedbredde / 2.0) +
+    sq(mouseY - pet.dyrHovedY) / sq(pet.dyrHovedhøjde / 2.0) <= 1)
+    ) {
+
     for (int i = 0; i < 4; i++) {
       particles.add(new HeartParticle(
         mouseX + random(-8, 8),
         mouseY + random(-8, 8)
         ));
 
-pet.glæde();
-     
+      pet.glæde();
     }
   }
 }
