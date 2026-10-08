@@ -83,6 +83,8 @@ void draw() {
 
 void mousePressed() {
   vandskaal.mousePressed();
+madskaal.mousePressed();
+
 
 if (
   (sq(mouseX - pet.dyrKropX) / sq(pet.dyrbredde / 2.0) +
@@ -102,9 +104,4 @@ pet.glæde();
      
     }
   }
-
-
-  // particles.mousePressed();
-
-  //  madskaal.mousePressed();
 }

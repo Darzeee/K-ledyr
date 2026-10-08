@@ -25,12 +25,10 @@ class Skaal {
     fill(indhold);
     ellipse(x+offset, y+12, l-10, h-25);
 
-
 //tekst på skålene
     fill(0);
     textSize(15);
     text(name, x + l/2, y + h/2 + 14);
-
 
 }
 
@@ -39,6 +37,7 @@ void mousePressed() {
     println(name);
     
     pet.tørst();
+    pet.glæde();
     }
   }
 }
