@@ -35,69 +35,75 @@ void draw() {
   pet.dyrKropForm();
 
   //particle
-for (int i = particles.size() - 1; i >= 0; i--) {
-  Particle p = particles.get(i);
+  for (int i = particles.size() - 1; i >= 0; i--) {
+    Particle p = particles.get(i);
 
-  p.update();
-  p.display();
+    p.update();
+    p.display();
 
-  if (p.isDead()) {
-    particles.remove(i);
+    if (p.isDead()) {
+      particles.remove(i);
+    }
+  }
+
+  //Øjet
+  e1.update(mouseX, mouseY);
+  e1.display();
+
+  //hvis man dør
+  if (pet.glædeDød) {
+    noStroke();
+    fill(0, 128);
+    rect(0, 0, width, height);
+
+    stroke(0);
+    fill(200);
+    rect(width/2-380, height/2-130, width/2+260, 80);
+    textSize(30);
+    fill(0);
+    text("Dit dyr er døde af depression...", width/2, height/2 - 100);
+    text("Næste gang skal du huske at kæle for " + pet.name, width/2, height/2 -62 );
+  }
+
+  if (pet.vandDød) {
+    noStroke();
+    fill(0, 128);
+    rect(0, 0, width, height);
+
+    stroke(0);
+    fill(200);
+    rect(width/2-410, height/2-140, width/2+320, 130);
+    textSize(30);
+    fill(0);
+    text(pet.name + " døde af tørst...", width/2, height/2 - 100);
+    text("Vand er vigtigt for alle levene væsner, så husk at give " + pet.name + " vand!", width/2, height/2 - 62);
+    text(" Måske skal du også selv tage et glas vand, inden du spiller igen.", width/2, height/2 - 30);
   }
 }
 
- //Øjet
-    e1.update(mouseX, mouseY);
-    e1.display();
+void mousePressed() {
+  vandskaal.mousePressed();
 
- //hvis man dør
-    if (pet.glædeDød) {
-      noStroke();
-      fill(0, 128);
-      rect(0, 0, width, height);
+if (
+  (sq(mouseX - pet.dyrKropX) / sq(pet.dyrbredde / 2.0) +
+   sq(mouseY - pet.dyrKropY) / sq(pet.dyrhøjde / 2.0) <= 1)
+  ||
+  (sq(mouseX - pet.dyrHovedX) / sq(pet.dyrHovedbredde / 2.0) +
+   sq(mouseY - pet.dyrHovedY) / sq(pet.dyrHovedhøjde / 2.0) <= 1)
+) {
 
-      stroke(0);
-      fill(200);
-      rect(width/2-380, height/2-130, width/2+260, 80);
-      textSize(30);
-      fill(0);
-      text("Dit dyr er døde af depression...", width/2, height/2 - 100);
-      text("Næste gang skal du huske at kæle for " + pet.name, width/2, height/2 -62 );
-    }
+    for (int i = 0; i < 4; i++) {
+      particles.add(new HeartParticle(
+        mouseX + random(-8, 8),
+        mouseY + random(-8, 8)
+        ));
 
-    if (pet.vandDød) {
-      noStroke();
-      fill(0, 128);
-      rect(0, 0, width, height);
-
-      stroke(0);
-      fill(200);
-      rect(width/2-410, height/2-140, width/2+320, 130);
-      textSize(30);
-      fill(0);
-      text(pet.name + " døde af tørst...", width/2, height/2 - 100);
-      text("Vand er vigtigt for alle levene væsner, så husk at give " + pet.name + " vand!", width/2, height/2 - 62);
-      text(" Måske skal du også selv tage et glas vand, inden du spiller igen.", width/2, height/2 - 30);
+      //}
     }
   }
-  
-  void mousePressed() {
-    vandskaal.mousePressed();
-    
-  // if(dist(mouseX, mouseY, pet.dyrKropX, pet.dyrKropY) < pet.radius){
-      for (int i = 0; i < 4; i++) {
-    particles.add(new HeartParticle(
-      mouseX + random(-8, 8),
-      mouseY + random(-8, 8)
-    ));
-    
-    //}
-    
-  }
 
-    
-   // particles.mousePressed();
-    
-    //  madskaal.mousePressed();
-  
-  }
+
+  // particles.mousePressed();
+
+  //  madskaal.mousePressed();
+}

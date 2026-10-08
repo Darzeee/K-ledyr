@@ -13,13 +13,26 @@ class Pet {
   boolean glædeDød;
   boolean vandDød;
 
+  // Dyr størrelse og position til ellipser
+  float dyrKropX;
+  float dyrKropY;
+  float dyrHovedX;
+  float dyrHovedY;
+
+  int dyrbredde;
+  int dyrhøjde;
+  int dyrHovedbredde;
+  int dyrHovedhøjde;
+
   //construktor, siger hvad der skal bruges når der laves et Pet
   Pet(String name, float x, float y) {
     this.name = name;
     this.x = x;
     this.y = y;
+
     vand = 100;
     glæde = 100;
+
     normalimg = loadImage("Dogfish.png");
     dødimg = loadImage("Blackdogfish.png");
   }
@@ -71,32 +84,41 @@ class Pet {
     //vand og glæde bar
     float glædelength = glæde * 2;
     float vandlength = vand * 2;
+
     noStroke();
+
     fill(#4B82C4);
     rect(width/2+105, 40, vandlength, 20);
+
     fill(#EAD71F);
     rect(width/2-305, 40, glædelength, 20);
 
     //vand og glæde bar
     fill(0);
     textSize(20);
+
     text("Vand: " + int(vand), 700, 20 + 36);
     text("Glæde: " + int(glæde), 295, 20 + 36);
+
     fill(150);
     stroke(0);
   }
 
   void dyrKropForm () {
-    float dyrHovedX = this.x+75;
-    float dyrHovedY = this.y+85;
-    int dyrHovedbredde = 100;
-    int dyrHovedhøjde = 100;
-    
-    float dyrKropX = this.x + 140;
-    float dyrKropY = this.y + 100;
-    int dyrhøjde = 100;
-    int dyrbredde = 200;
-    
+    dyrHovedX = this.x+75;
+    dyrHovedY = this.y+85;
+
+    dyrHovedbredde = 100;
+    dyrHovedhøjde = 100;
+
+    dyrKropX = this.x + 190;
+    dyrKropY = this.y + 120;
+
+    dyrhøjde = 120;
+    dyrbredde = 250;
+
+    noFill();
+    noStroke();
 
     ellipse(dyrKropX, dyrKropY, dyrbredde, dyrhøjde);
 
@@ -104,7 +126,7 @@ class Pet {
   }
 
   void glæde() {
-    glæde = glæde + 0.15;
+    glæde = glæde + 0.5;
     if (glæde > 100) {
       glæde = 100;
     }
