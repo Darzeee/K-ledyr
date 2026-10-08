@@ -13,7 +13,6 @@ class Pet {
   boolean glædeDød;
   boolean vandDød;
 
-
   //construktor, siger hvad der skal bruges når der laves et Pet
   Pet(String name, float x, float y) {
     this.name = name;
@@ -26,7 +25,7 @@ class Pet {
   }
 
   void update() { //Får energien til at gå nedad
-    vand = vand - 0.04;
+    vand = vand - 0.05;
 
     normalimgTint = normalimgTint - 0.4;
 
@@ -35,15 +34,13 @@ class Pet {
       vandDød = true;
     }
 
-
-    glæde = glæde - 0.05;
+    glæde = glæde - 0.06;
 
     if (glæde < 0) {
       glæde = 0;
       glædeDød = true;
     }
   }
-
 
   void display() {
     //død baggrund og dyr
@@ -100,6 +97,8 @@ class Pet {
     vand = vand + 2;
     if (vand > 100) {
       vand = 100;
+
+      this.x = this.x -100;
     }
   }
 }

@@ -1,13 +1,15 @@
 Eye e1;
 
 class Eye {
-  int x, y;
+  float x, y;
   int size;
   float angle = 0.0;
   
-  Eye(int tx, int ty, int ts) {
-    x = tx;
-    y = ty;
+  Eye(float tx, float ty, int ts) {
+   // x = tx;
+    //y = ty;
+    x = pet.x + tx;
+    y = pet.y + ty;
     size = ts;
  }
 

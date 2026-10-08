@@ -22,7 +22,7 @@ void setup() {
 
   //Øjet
   noStroke();
-  e1 = new Eye( 355, 395, 20);
+  e1 = new Eye( 55, 70, 20);
 }
 
 void draw() {
@@ -71,14 +71,10 @@ void draw() {
   void mousePressed() {
     vandskaal.mousePressed();
     
-    for (int i = 0; i < 4; i++) {
-    particles.add(new HeartParticle(
-      mouseX + random(-8, 8),
-      mouseY + random(-8, 8)
-    ));
+
     
    // particles.mousePressed();
     
     //  madskaal.mousePressed();
-  }
+  
   }
