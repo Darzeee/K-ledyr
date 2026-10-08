@@ -22,7 +22,7 @@ void setup() {
 
   //Øjet
   noStroke();
-  e1 = new Eye( 55, 70, 20);
+  e1 = new Eye( pet.x+55, pet.y+70, 20);
 }
 
 void draw() {

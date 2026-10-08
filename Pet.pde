@@ -87,11 +87,12 @@ class Pet {
   }
 
   void dyrKropForm () {
-    float dyrKropX = this.x+40;
-    float dyrKropY = this.y+100;
-    int radius = 100;
+    float dyrHovedX = this.x+75;
+    float dyrHovedY = this.y+85;
+    int dyrHovedbredde = 100;
+    int dyrHovedhøjde = 100;
 
-    ellipse(dyrKropX, dyrKropY, radius, radius);
+    ellipse(dyrHovedX, dyrHovedY, dyrHovedbredde, dyrHovedhøjde);
   }
 
   void glæde() {
