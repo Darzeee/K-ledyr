@@ -33,6 +33,17 @@ void draw() {
   vandskaal.display(); //viser vandskålen
   madskaal.display(); //viser madskålen
 
+  //particle
+for (int i = particles.size() - 1; i >= 0; i--) {
+  Particle p = particles.get(i);
+
+  p.update();
+  p.display();
+
+  if (p.isDead()) {s
+    particles.remove(i);
+  }
+}
  //Øjet
     e1.update(mouseX, mouseY);
     e1.display();
@@ -71,6 +82,14 @@ void draw() {
   void mousePressed() {
     vandskaal.mousePressed();
     
+      for (int i = 0; i < 4; i++) {
+    particles.add(new HeartParticle(
+      mouseX + random(-8, 8),
+      mouseY + random(-8, 8)
+    ));
+
+    
+  }
 
     
    // particles.mousePressed();

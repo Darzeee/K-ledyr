@@ -11,23 +11,22 @@ class Particle {
 
     vx = random(-1, 1);
     vy = random(-2.5, -0.5);
-    alpha = random(50, 255);
+    alpha = random(50,255);
   }
 
   void update() {
     x = x + vx;
     y = y + vy;
-    alpha = alpha - 3;
+    alpha = alpha - 10;
   }
-  
+
   void display() {
     noStroke();
     fill(alpha);
     circle(x, y, 12);
   }
 
-
-  void mousePressed() {
-      pet.glæde();
-    }
-  }
+boolean isDead() {
+  return alpha <= 0;
+}
+}
