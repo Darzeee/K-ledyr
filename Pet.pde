@@ -130,6 +130,7 @@ class Pet {
     if (glæde > 100) {
       glæde = 100;
     }
+    
   }
 
   void tørst() {

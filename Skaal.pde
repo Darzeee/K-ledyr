@@ -18,26 +18,32 @@ class Skaal {
     offset = 45;
   }
 
-//vis skålene
+  //vis skålene
   void display() {
     fill(farve);
     rect(x, y, l, h);
     fill(indhold);
     ellipse(x+offset, y+12, l-10, h-25);
 
-//tekst på skålene
+    //tekst på skålene
     fill(0);
     textSize(15);
     text(name, x + l/2, y + h/2 + 14);
+  }
 
-}
+  void mousePressed() {
+    if (mouseX >= x && mouseY >= y && mouseX <= x + l && mouseY <= y + h) {
+      println(name);
 
-void mousePressed() {
-  if (mouseX >= x && mouseY >= y && mouseX <= x + l && mouseY <= y + h) {
-    println(name);
-    
-    pet.tørst();
-    pet.glæde();
+      if (name == "Mad") {
+
+        pet.glæde();
+      }
+
+      if (name == "Vand") {
+
+        pet.tørst();
+      }
     }
   }
 }
