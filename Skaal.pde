@@ -36,12 +36,10 @@ class Skaal {
       println(name);
 
       if (name == "Mad") {
-
         pet.glæde();
       }
 
       if (name == "Vand") {
-
         pet.tørst();
       }
     }
